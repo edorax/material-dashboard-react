@@ -3,9 +3,24 @@ import { Grid } from "material-ui";
 
 import { RegularCard, Table, ItemGrid } from "components";
 
+import MovieTable from "containers/Table/MovieTable";
+
 function TableList({ ...props }) {
   return (
     <Grid container>
+      <ItemGrid xs={12} sm={12} md={12}>
+        <RegularCard
+          cardTitle="Movies"
+          cardSubtitle="A list of movies"
+          content={
+            <MovieTable
+              tableHeaderColor="primary"
+              tableHead={["Title"]}
+              tableData={[]}
+            />
+          }
+        />
+      </ItemGrid>
       <ItemGrid xs={12} sm={12} md={12}>
         <RegularCard
           cardTitle="Simple Table"
